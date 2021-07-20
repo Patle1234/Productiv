@@ -34,14 +34,9 @@ class AppViewModel: ObservableObject {
         print("hereadffewarte")
         auth.createUser(withEmail: email,
                         password: password) { [weak self]  result, error in
-            print("in create")
-            print("results: ", result)
-            print("error: ", error)
             guard result != nil, error == nil else {
-                print("what this")
                 return
             }
-            print("got here")
             DispatchQueue.main.async {
                 self?.signedIn=true
             }
@@ -59,20 +54,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             if viewModel.signedIn {
-                Button(action: {
-                    viewModel.signOut()
-                }, label: {
-                    Text("Sign Out")
-                        .frame(width:200, height:50)
-                        .background(Color.green)
-                        .foregroundColor(Color.blue)
-                        .padding()
-                })
-                
-                
-                Text("You are signed in")
-                
-               
+                mainView()
             }else{
                 SignInView()
 
@@ -101,11 +83,15 @@ struct SignInView: View {
                 TextField("Email Address",text: $email)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
+                    .font(Font.system(size: 25, design: .default))
+                    .cornerRadius(8)
                     .background(Color(.secondarySystemBackground))
                     .padding()
                 SecureField("Password", text: $password)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
+                    .font(Font.system(size: 25, design: .default))
+                    .cornerRadius(8)
                     .background(Color(.secondarySystemBackground))
                     .padding()
                 
@@ -120,8 +106,7 @@ struct SignInView: View {
                         .frame(width: 200, height: 50, alignment: .center)
                         .background(Color.blue)
                         .cornerRadius(8)
-                    
-                    
+                                    
                 })
                 NavigationLink("Create Account", destination: SignUpView())
                     .padding()
@@ -151,11 +136,15 @@ struct SignUpView: View {
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .background(Color(.secondarySystemBackground))
+                    .font(Font.system(size: 25, design: .default))
+                    .cornerRadius(8)
                     .padding()
                 SecureField("Password", text: $password)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .background(Color(.secondarySystemBackground))
+                    .font(Font.system(size: 25, design: .default))
+                    .cornerRadius(8)
                     .padding()
                 
                 Button(action: {
@@ -163,8 +152,6 @@ struct SignUpView: View {
                     guard !email.isEmpty, !password.isEmpty else {//if the textfields are empty
                         return
                     }
-                    print("reaches here")
-                    print("emial:",email)
                     viewModel.signUp(email: email, password: password)
                 }, label: {
                     Text("Sign Up")
@@ -183,6 +170,95 @@ struct SignUpView: View {
     }
 }
 
+struct mainView: View {
+    @EnvironmentObject var viewModel: AppViewModel
+    var body: some View {
+        TabView{
+            taskView()
+            .tabItem({
+                Image(systemName:"list.bullet")
+            })
+            teamView()
+                .tabItem({
+                    Image(systemName:"person.3.fill")
+                    Text("Team")
+                })
+            settingsView()
+                .tabItem({
+                    Image(systemName:"gear")
+                    Text("Setttings")
+                })
+        }
+        
+        
+    }
+}
+
+struct settingsView: View{
+    @EnvironmentObject var viewModel: AppViewModel
+
+    var body: some View {
+        VStack{
+            Button(action: {
+                viewModel.signOut()
+            }, label: {
+                Text("Sign Out")
+                    .frame(width:250, height:75)
+                    .background(Color.black)
+                    .foregroundColor(Color.white)
+                    .cornerRadius(8)
+                    .padding()
+            })
+        }
+        .navigationTitle("Setttings")
+    }
+}
+
+struct taskView: View{
+    let task = testDataTasks
+    var body: some View {
+        NavigationView{
+            VStack{
+                List(task){task in
+                    if(task.ifCompleted){
+                        Image(systemName:"app.fill")
+                    }else{
+                        Image(systemName:"app")
+                    }
+                    Text(task.taskName)
+                }
+                
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("+")
+                            .font(.system(.largeTitle))
+                            .frame(width: 77, height: 70)
+                            .foregroundColor(Color.white)
+                            .padding(.bottom, 7)
+                    })
+                    .background(Color.blue)
+                    .cornerRadius(38.5)
+                    .padding()
+                    .shadow(color: Color.black.opacity(0.3), radius: 3, x: 3, y: 3)
+                }
+            }
+            .navigationTitle("Tasks")
+        }
+    }
+}
+
+struct teamView: View{
+    var body: some View {
+        VStack{
+
+        }
+        .navigationTitle("Tasks")
+    }
+}
 
 
 struct ContentView_Previews: PreviewProvider {
