@@ -1,0 +1,6 @@
+framework module Pods_Productiv__macOS_ {
+  umbrella header "Pods-Productiv (macOS)-umbrella.h"
+
+  export *
+  module * { export * }
+}
