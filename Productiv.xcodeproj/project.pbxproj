@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		010BF9BA49CA537379458202 /* Pods_Productiv__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4937AA018F85415C03E0C91C /* Pods_Productiv__macOS_.framework */; };
+		3D3D8A2126A7D09F0014ECDB /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D8A2026A7D09E0014ECDB /* ListViewModel.swift */; };
+		3D3D8A2226A7D09F0014ECDB /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D8A2026A7D09E0014ECDB /* ListViewModel.swift */; };
+		3D3D8A2426A7D0A60014ECDB /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D8A2326A7D0A60014ECDB /* TaskCellViewModel.swift */; };
+		3D3D8A2526A7D0A60014ECDB /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D8A2326A7D0A60014ECDB /* TaskCellViewModel.swift */; };
 		3D46BF3226954E5A00593D7E /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46BF3126954E5A00593D7E /* Tests_iOS.swift */; };
 		3D46BF3D26954E5A00593D7E /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46BF3C26954E5A00593D7E /* Tests_macOS.swift */; };
 		3D46BF3F26954E5A00593D7E /* ProductivApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46BF1626954E5900593D7E /* ProductivApp.swift */; };
 		3D46BF4026954E5A00593D7E /* ProductivApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46BF1626954E5900593D7E /* ProductivApp.swift */; };
-		3D46BF4126954E5A00593D7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46BF1726954E5900593D7E /* ContentView.swift */; };
-		3D46BF4226954E5A00593D7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46BF1726954E5900593D7E /* ContentView.swift */; };
 		3D46BF4326954E5A00593D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D46BF1826954E5A00593D7E /* Assets.xcassets */; };
 		3D46BF4426954E5A00593D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D46BF1826954E5A00593D7E /* Assets.xcassets */; };
+		3D54238526BCE081003DD47F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D54238426BCE081003DD47F /* ContentView.swift */; };
+		3D54238626BCE081003DD47F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D54238426BCE081003DD47F /* ContentView.swift */; };
 		3DEC0E2426A64C1500735A3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DEC0E2326A64C1500735A3C /* GoogleService-Info.plist */; };
 		3DEC0E2526A64C1500735A3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DEC0E2326A64C1500735A3C /* GoogleService-Info.plist */; };
 		3DEC0E2726A679C400735A3C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC0E2626A679C400735A3C /* Task.swift */; };
@@ -44,8 +48,9 @@
 
 /* Begin PBXFileReference section */
 		2D7515DBDE5D32F21346BCB2 /* Pods-Productiv (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Productiv (macOS).release.xcconfig"; path = "Target Support Files/Pods-Productiv (macOS)/Pods-Productiv (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		3D3D8A2026A7D09E0014ECDB /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewModel.swift; path = ViewModels/ListViewModel.swift; sourceTree = "<group>"; };
+		3D3D8A2326A7D0A60014ECDB /* TaskCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskCellViewModel.swift; path = ViewModels/TaskCellViewModel.swift; sourceTree = "<group>"; };
 		3D46BF1626954E5900593D7E /* ProductivApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivApp.swift; sourceTree = "<group>"; };
-		3D46BF1726954E5900593D7E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D46BF1826954E5A00593D7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D46BF1D26954E5A00593D7E /* Productiv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Productiv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D46BF2026954E5A00593D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 		3D46BF3826954E5A00593D7E /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D46BF3C26954E5A00593D7E /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		3D46BF3E26954E5A00593D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D54238426BCE081003DD47F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3DEC0E2326A64C1500735A3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3DEC0E2626A679C400735A3C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		3DF700EA26993D8700C09E52 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -102,12 +108,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D3D8A1F26A7CFDF0014ECDB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3D3D8A2326A7D0A60014ECDB /* TaskCellViewModel.swift */,
+				3D3D8A2026A7D09E0014ECDB /* ListViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		3D3E764D26BCE12D00B137FF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				3DEC0E2626A679C400735A3C /* Task.swift */,
+				3D46BF1626954E5900593D7E /* ProductivApp.swift */,
+				3D54238426BCE081003DD47F /* ContentView.swift */,
+				3DF700EA26993D8700C09E52 /* Utilities.swift */,
+				3D46BF1826954E5A00593D7E /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		3D46BF1026954E5900593D7E = {
 			isa = PBXGroup;
 			children = (
-				3DF700EA26993D8700C09E52 /* Utilities.swift */,
+				3D3D8A1F26A7CFDF0014ECDB /* ViewModels */,
 				3DEC0E2326A64C1500735A3C /* GoogleService-Info.plist */,
-				3D46BF1526954E5900593D7E /* Shared */,
+				3D3E764D26BCE12D00B137FF /* Shared */,
 				3D46BF1F26954E5A00593D7E /* iOS */,
 				3D46BF2626954E5A00593D7E /* macOS */,
 				3D46BF3026954E5A00593D7E /* Tests iOS */,
@@ -116,17 +143,6 @@
 				60A64420FD3459364DCC71F9 /* Pods */,
 				EACD5FAA65767073271B11E6 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		3D46BF1526954E5900593D7E /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				3D46BF1626954E5900593D7E /* ProductivApp.swift */,
-				3DEC0E2626A679C400735A3C /* Task.swift */,
-				3D46BF1726954E5900593D7E /* ContentView.swift */,
-				3D46BF1826954E5A00593D7E /* Assets.xcassets */,
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		3D46BF1E26954E5A00593D7E /* Products */ = {
@@ -439,9 +455,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D3D8A2126A7D09F0014ECDB /* ListViewModel.swift in Sources */,
 				3DEC0E2726A679C400735A3C /* Task.swift in Sources */,
+				3D54238526BCE081003DD47F /* ContentView.swift in Sources */,
 				3DF700EB26993D8700C09E52 /* Utilities.swift in Sources */,
-				3D46BF4126954E5A00593D7E /* ContentView.swift in Sources */,
+				3D3D8A2426A7D0A60014ECDB /* TaskCellViewModel.swift in Sources */,
 				3D46BF3F26954E5A00593D7E /* ProductivApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,9 +468,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D3D8A2226A7D09F0014ECDB /* ListViewModel.swift in Sources */,
 				3DEC0E2826A679C400735A3C /* Task.swift in Sources */,
+				3D54238626BCE081003DD47F /* ContentView.swift in Sources */,
 				3DF700EC26993D8700C09E52 /* Utilities.swift in Sources */,
-				3D46BF4226954E5A00593D7E /* ContentView.swift in Sources */,
+				3D3D8A2526A7D0A60014ECDB /* TaskCellViewModel.swift in Sources */,
 				3D46BF4026954E5A00593D7E /* ProductivApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
