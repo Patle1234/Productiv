@@ -51,6 +51,7 @@ using model::MaybeDocumentMap;
 using model::OptionalMaybeDocumentMap;
 using model::ResourcePath;
 using model::SnapshotVersion;
+using nanopb::ByteString;
 using nanopb::Message;
 using nanopb::StringReader;
 using util::BackgroundQueue;

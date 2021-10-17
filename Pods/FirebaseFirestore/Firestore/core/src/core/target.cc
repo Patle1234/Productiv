@@ -33,6 +33,7 @@ namespace firestore {
 namespace core {
 
 using model::DocumentKey;
+using model::FieldPath;
 
 // MARK: - Accessors
 

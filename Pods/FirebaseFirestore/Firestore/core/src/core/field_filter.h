@@ -46,7 +46,7 @@ class FieldFilter : public Filter {
                             Operator op,
                             model::FieldValue value_rhs);
 
-  explicit FieldFilter(const Filter& other);
+  explicit FieldFilter(const Filter& filter);
 
   const model::FieldPath& field() const {
     return field_filter_rep().field_;
@@ -106,7 +106,7 @@ class FieldFilter : public Filter {
      */
     Rep(model::FieldPath field, Operator op, model::FieldValue value_rhs);
 
-    bool MatchesComparison(util::ComparisonResult comparison) const;
+    bool MatchesComparison(util::ComparisonResult result) const;
 
    private:
     friend class FieldFilter;

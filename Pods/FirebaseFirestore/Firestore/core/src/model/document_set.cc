@@ -30,6 +30,8 @@ namespace firestore {
 namespace model {
 namespace {
 
+using immutable::SortedSet;
+
 inline absl::optional<Document> none() {
   return absl::optional<Document>{};
 }

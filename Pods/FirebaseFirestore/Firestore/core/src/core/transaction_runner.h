@@ -54,7 +54,7 @@ class TransactionRunner
 
  private:
   void ContinueCommit(const std::shared_ptr<Transaction>& transaction,
-                      util::Status status);
+                      util::Status maybe_result);
 
   void DispatchResult(const std::shared_ptr<Transaction>& transaction,
                       util::Status status);

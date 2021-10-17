@@ -28,7 +28,10 @@ namespace firebase {
 namespace firestore {
 namespace local {
 
+using model::DocumentKey;
 using model::MaybeDocument;
+using nanopb::ByteString;
+using nanopb::Message;
 
 ProtoSizer::ProtoSizer(LocalSerializer serializer)
     : serializer_(std::move(serializer)) {
